@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Solway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="backgroundImage"></div>
+    <div class="intro">
+      <h1>I am Shashank</h1>
+      <h3>I want to code !</h3>
+    </div>
+
+    <div class="verticalMenu">
+      <button class=" active" onClick="showMenu(event, 'me')" id="meButton">
+        Me
+      </button>
+      <button onClick="showMenu(event, 'weekdays')" id="weekdaysButton">
+        Weekdays
+      </button>
+      <button onClick="showMenu(event, 'weekends')" id="weekendsButton">
+        Weekends
+      </button>
+      <button onClick="showMenu(event, 'ambition')" id="ambitionButton">
+        Ambition
+      </button>
+      <button onClick="showMenu(event, 'reachMe')" id="reachMeButton">
+        Reach me
+      </button>
+    </div>
+
+    <div class="menuContent me" id="meMenu">
+      <p>I am Shashank Shekhar</p>
+      <p>I am 24 years old</p>
+      <p><img src="india.png" height="30" width="30" align="middle" /></p>
+    </div>
+
+    <div class="menuContent weekdays" id="weekdaysMenu">
+      <p>I wake up</p>
+      <p>I go to office</p>
+      <p>I come back</p>
+    </div>
+
+    <div class="menuContent weekends" id="weekendsMenu">
+      <p>I play Cricket</p>
+      <p>I play Guitar</p>
+      <p>I hang out</p>
+    </div>
+
+    <div class="menuContent ambition" id="ambitionMenu">
+      <p>This is website V1</p>
+      <p>This section will have links to further versions</p>
+      <p>Better versions if I may !</p>
+    </div>
+
+    <div class="menuContent reachMe" id="reachMeMenu">
+      <p>Soon</p>
+    </div>
+
+    <div class="footer">
+      <h3>:)</h3>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

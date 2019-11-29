@@ -1,0 +1,108 @@
+body,
+html {
+  height: 100%;
+  font-family: "Solway", serif;
+  margin: 0 0 auto 0;
+}
+
+.backgroundImage {
+  height: 100%;
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  background-color:black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  color: #EDF5E1;
+  font-weight: bold;
+  border: 3px solid #EDF5E1;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.verticalMenu {
+  color: #EDF5E1;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  transform: translate(20%);
+  z-index: 2;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.verticalMenu button {
+  color: #EDF5E1;
+  font-family: "Solway", serif;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: inherit;
+}
+
+.verticalMenu button.active {
+  color: yellow;
+}
+
+.menuContent {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  color: #EDF5E1;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  transform: translate(50%);
+  z-index: 2;
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.weekdays {
+  display: none;
+}
+
+.weekends {
+  display: none;
+}
+
+.ambition {
+  display: none;
+}
+
+.reachMe {
+  display: none;
+}
+
+.menuContent p {
+  line-height: 1.6;
+}
+
+.footer {
+  color: #EDF5E1;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}

@@ -38,8 +38,13 @@ const createLock = () => {
 }
 
 const mouseDown = Rx.Observable.fromEvent(keyElement, "mousedown");
+const touchStart = Rx.Observable.fromEvent(keyElement, "touchstart");
+
 const mouseMoves = Rx.Observable.fromEvent(document, "mousemove");
+const touchMoves = Rx.Observable.fromEvent(document, "touchmove");
+
 const mouseUps = Rx.Observable.fromEvent(document, "mouseup");
+const touchEnds = Rx.Observable.fromEvent(document, "touchend");
 
 const canUnlock = (pos) => {
     const LOCK_LEFT = LOCK_X + 10;
@@ -57,15 +62,15 @@ const canUnlock = (pos) => {
 }
 
 
-const keyObservable = mouseDown.map((_mouseDown) =>  { 
-     return  mouseMoves.map(mouseMove => {
+const keyObservable = Rx.Observable.merge(mouseDown, touchStart).map((_mouseDown) =>  { 
+     return  Rx.Observable.merge(mouseMoves, touchMoves).map(mouseMove => {
                 mouseMove.preventDefault();
                     return {
                         x: mouseMove.clientX,
                         y: mouseMove.clientY
                     }
                 })
-        .takeUntil(mouseUps)
+        .takeUntil(Rx.Observable.merge(mouseUps, touchEnds))
 }).concatAll();
 
 

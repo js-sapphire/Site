@@ -1,5 +1,6 @@
 body,
-html {
+html,
+.fullPage {
   height: 100%;
   font-family: "Solway", serif;
   margin: 0 0 auto 0;
@@ -8,6 +9,7 @@ html {
 .backgroundImage {
   height: 100%;
   /* Add the blur effect */
+  background-image: url('./bg.jpg');
   filter: blur(1px);
   -webkit-filter: blur(1px);
   background-color:black;

@@ -16,10 +16,10 @@ const randomInt = (min, max) => {
 const createKey = () => {
     const randomX = ((Math.random()*2)>1) ?
      randomInt(KEY_SIZE, LOCK_X-KEY_SIZE-10) :
-     randomInt(LOCK_X+LOCK_SIZE+10, width);
+     randomInt(LOCK_X+LOCK_SIZE+10, width-2*(KEY_SIZE));
 
     const randomY = ((Math.random()*2)>1) ?
-     randomInt(0, LOCK_Y-KEY_SIZE-10) :
+     randomInt(KEY_SIZE, LOCK_Y-KEY_SIZE-10) :
      randomInt(LOCK_Y+LOCK_SIZE+10, height-2*(KEY_SIZE));
 
     keyElement.style.position = "absolute";

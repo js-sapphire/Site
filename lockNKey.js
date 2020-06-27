@@ -72,7 +72,6 @@ const keyObservable = mouseDown.map((_mouseDown) =>  {
 const subscription = 
     keyObservable.forEach((mouseMoves) => {
         if(canUnlock(mouseMoves)){
-            console.log('DISPOSING');
             subscription.dispose();
             cleanLocknKey();
         }

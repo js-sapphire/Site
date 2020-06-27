@@ -88,7 +88,7 @@ const createLockNKey = () => {
 const cleanLocknKey = () => {
     const keyElem = document.querySelector(`.key`) 
     lockElement.style.display = keyElem.style.display = 'none';
-    siteDiv.style.display = 'block';
+    siteDiv.style.visibility = 'visible';
 }       
 
 createLockNKey();
